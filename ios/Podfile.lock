@@ -9,21 +9,88 @@ PODS:
     - React-Core (= 0.67.0)
     - React-jsi (= 0.67.0)
     - ReactCommon/turbomodule/core (= 0.67.0)
+  - Firebase/Analytics (10.1.0):
+    - Firebase/Core
+  - Firebase/Core (10.1.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (~> 10.1.0)
   - Firebase/CoreOnly (10.1.0):
     - FirebaseCore (= 10.1.0)
+  - FirebaseAnalytics (10.1.0):
+    - FirebaseAnalytics/AdIdSupport (= 10.1.0)
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/MethodSwizzler (~> 7.8)
+    - GoogleUtilities/Network (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseAnalytics/AdIdSupport (10.1.0):
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleAppMeasurement (= 10.1.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/MethodSwizzler (~> 7.8)
+    - GoogleUtilities/Network (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
   - FirebaseCore (10.1.0):
     - FirebaseCoreInternal (~> 10.0)
     - GoogleUtilities/Environment (~> 7.8)
     - GoogleUtilities/Logger (~> 7.8)
   - FirebaseCoreInternal (10.1.0):
     - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - FirebaseInstallations (10.1.0):
+    - FirebaseCore (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/UserDefaults (~> 7.8)
+    - PromisesObjC (~> 2.1)
   - fmt (6.2.1)
   - glog (0.3.5)
+  - GoogleAppMeasurement (10.1.0):
+    - GoogleAppMeasurement/AdIdSupport (= 10.1.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/MethodSwizzler (~> 7.8)
+    - GoogleUtilities/Network (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleAppMeasurement/AdIdSupport (10.1.0):
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 10.1.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/MethodSwizzler (~> 7.8)
+    - GoogleUtilities/Network (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleAppMeasurement/WithoutAdIdSupport (10.1.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/MethodSwizzler (~> 7.8)
+    - GoogleUtilities/Network (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleUtilities/AppDelegateSwizzler (7.8.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
   - GoogleUtilities/Environment (7.8.0):
     - PromisesObjC (< 3.0, >= 1.2)
   - GoogleUtilities/Logger (7.8.0):
     - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (7.8.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (7.8.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
   - "GoogleUtilities/NSData+zlib (7.8.0)"
+  - GoogleUtilities/Reachability (7.8.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (7.8.0):
+    - GoogleUtilities/Logger
+  - nanopb (2.30909.0):
+    - nanopb/decode (= 2.30909.0)
+    - nanopb/encode (= 2.30909.0)
+  - nanopb/decode (2.30909.0)
+  - nanopb/encode (2.30909.0)
   - PromisesObjC (2.1.1)
   - RCT-Folly (2021.06.28.00-v2):
     - boost
@@ -288,6 +355,10 @@ PODS:
     - React-jsi (= 0.67.0)
     - React-logger (= 0.67.0)
     - React-perflogger (= 0.67.0)
+  - RNFBAnalytics (16.4.3):
+    - Firebase/Analytics (= 10.1.0)
+    - React-Core
+    - RNFBApp
   - RNFBApp (16.4.3):
     - Firebase/CoreOnly (= 10.1.0)
     - React-Core
@@ -325,16 +396,21 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - "RNFBAnalytics (from `../node_modules/@react-native-firebase/analytics`)"
   - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   trunk:
     - Firebase
+    - FirebaseAnalytics
     - FirebaseCore
     - FirebaseCoreInternal
+    - FirebaseInstallations
     - fmt
+    - GoogleAppMeasurement
     - GoogleUtilities
+    - nanopb
     - PromisesObjC
 
 EXTERNAL SOURCES:
@@ -396,6 +472,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/runtimeexecutor"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNFBAnalytics:
+    :path: "../node_modules/@react-native-firebase/analytics"
   RNFBApp:
     :path: "../node_modules/@react-native-firebase/app"
   Yoga:
@@ -407,11 +485,15 @@ SPEC CHECKSUMS:
   FBLazyVector: dce905f90eacf2e62ffbc2a4bbda8ea630aabd8a
   FBReactNativeSpec: 7444057cd46e87525b82f3e41f05e1db0d0029f2
   Firebase: 444b35a9c568a516666213c2f6cccd10cb12559f
+  FirebaseAnalytics: 24cb27b52b2e11ad5013528195b4ca0755dec960
   FirebaseCore: 55e7ae35991ccca4db03ff8d8df6ed5f17a3e4c7
   FirebaseCoreInternal: 96d75228e10fd369564da51bd898414eb0f54df5
+  FirebaseInstallations: 99d24bac0243cf8b0e96cf5426340d211f0bcc80
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 85ecdd10ee8d8ec362ef519a6a45ff9aa27b2e85
+  GoogleAppMeasurement: e490e248af3da95afe8fa8e7baac232dc8d020b7
   GoogleUtilities: 1d20a6ad97ef46f67bbdec158ce00563a671ebb7
+  nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
   RCT-Folly: 803a9cfd78114b2ec0f140cfa6fa2a6bafb2d685
   RCTRequired: 1af97c470c81e8cbb92c5ae42c4838ea95761743
@@ -437,9 +519,10 @@ SPEC CHECKSUMS:
   React-RCTVibration: 7d7eb0db1f7f914945a606e0e91bb535099a07db
   React-runtimeexecutor: 4512c9287cc72ba30bb1d5e01e6bde7a69f2d22b
   ReactCommon: af6dd2c8c0de935841fa809caf41b2093bb9075c
-  RNFBApp: 90153cce9b119f4546a4e5fb1427bca963448dc5
+  RNFBAnalytics: 881ce1cb0fa57cbbafc540076326f05879e89989
+  RNFBApp: e2157f61e4769b53641df8948c534580630cb50a
   Yoga: 3f5bfc54ce164fcd5b5d7f9f4232182d6298dd56
 
-PODFILE CHECKSUM: 8239a680b86be599358305e7ac82a24585d3aa57
+PODFILE CHECKSUM: bfb531d829e93dbab3e0a4b15debea69f6bae64b
 
 COCOAPODS: 1.11.2
