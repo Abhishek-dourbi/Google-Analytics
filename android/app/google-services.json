@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "512238045667",
+    "project_id": "test-analytics-ff222",
+    "storage_bucket": "test-analytics-ff222.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512238045667:android:f919360dda1373429e38d6",
+        "android_client_info": {
+          "package_name": "com.testanalytics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "512238045667-mhma33395jljidb05jeu3jgaf9pu157k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfM3sQRnj7ynDIOEW7ksp_KPc87FBbd1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "512238045667-mhma33395jljidb05jeu3jgaf9pu157k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
