@@ -47,6 +47,7 @@ PODS:
     - PromisesObjC (~> 2.1)
   - fmt (6.2.1)
   - glog (0.3.5)
+  - GoogleAnalytics (3.20.0)
   - GoogleAppMeasurement (10.1.0):
     - GoogleAppMeasurement/AdIdSupport (= 10.1.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
@@ -67,6 +68,9 @@ PODS:
     - GoogleUtilities/Network (~> 7.8)
     - "GoogleUtilities/NSData+zlib (~> 7.8)"
     - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleTagManager (7.4.2):
+    - FirebaseAnalytics (< 11.0, >= 9.0)
+    - GoogleAnalytics (~> 3.20)
   - GoogleUtilities/AppDelegateSwizzler (7.8.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -370,6 +374,7 @@ DEPENDENCIES:
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - GoogleTagManager
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
@@ -408,7 +413,9 @@ SPEC REPOS:
     - FirebaseCoreInternal
     - FirebaseInstallations
     - fmt
+    - GoogleAnalytics
     - GoogleAppMeasurement
+    - GoogleTagManager
     - GoogleUtilities
     - nanopb
     - PromisesObjC
@@ -491,7 +498,9 @@ SPEC CHECKSUMS:
   FirebaseInstallations: 99d24bac0243cf8b0e96cf5426340d211f0bcc80
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 85ecdd10ee8d8ec362ef519a6a45ff9aa27b2e85
+  GoogleAnalytics: 01e4c5a04544a3608f93e970ce0817836897c5a5
   GoogleAppMeasurement: e490e248af3da95afe8fa8e7baac232dc8d020b7
+  GoogleTagManager: 5bf1ba6bf4a1196d7f46a49e1b41f0ef19cf9876
   GoogleUtilities: 1d20a6ad97ef46f67bbdec158ce00563a671ebb7
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
@@ -523,6 +532,6 @@ SPEC CHECKSUMS:
   RNFBApp: e2157f61e4769b53641df8948c534580630cb50a
   Yoga: 3f5bfc54ce164fcd5b5d7f9f4232182d6298dd56
 
-PODFILE CHECKSUM: bfb531d829e93dbab3e0a4b15debea69f6bae64b
+PODFILE CHECKSUM: a4f9df2cf305f7669df9b646cd9c2f7dace83182
 
 COCOAPODS: 1.11.2
